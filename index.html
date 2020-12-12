@@ -2,19 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <link rel="stylesheet" href="css/themify-icons/themify-icons.css">
     <link rel="stylesheet" href="css/style.css">
     <title> Dashboard DataTable</title>
 </head>
 <body>
+    <input type="checkbox" id="sidebar-toggle">
     <div class="sidebar">
         <div class="sidebar-header">
             <h3 class="brand">
                 <span class="ti-unlink"></span>
                 <span>Dashboard</span>
             </h3>
-            <span class="ti-menu"></span>
+            <label for="sidebar-toggle" class="ti-menu"></label>
         </div>
         <div class="sidebar-menu">
             <ul>
@@ -41,18 +42,94 @@
                <div class="social-icons">
                 <span class="ti-bell"></span>
                 <span class="ti-comment"></span>
-               </div>
-               
+               </div>   
            </header>
-       </div> 
-       <main>
-           <section class="recent">
-               <div class="row">
-                   <div class="col-1-of-6"></div>
-               </div>
-           </section>
-
-       </main>
+           <main class="main">
+            <section class="recent">
+                <div class="activity-grid">
+                    <div class="activity-card">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Project</th>
+                                <th>Start Date</th>
+                                <th>End Date</th>
+                                <th>Team</th>
+                                <th>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>App Development</td>
+                                <td>15 Aug, 2020</td>
+                                <td>22 August 2020</td>
+                                <td>Team S</td>
+                                <td>
+                                    <span class="badge success">sucessful</span>  </td>
+                            <tr>
+                                <td>App Development</td>
+                                <td>15 Aug, 2020</td>
+                                <td>22 August 2020</td>
+                                <td>Team S</td>
+                                <td>
+                                    <span class="badge success">sucessful</span>  </td>
+                            </tr>
+                            <tr>
+                                <td>App Development</td>
+                                <td>15 Aug, 2020</td>
+                                <td>22 August 2020</td>
+                                <td>Team S</td>
+                                <td>
+                                    <span class="badge success">successful</span>  </td>
+                            </tr>
+                            <tr>
+                                <td>App Development</td>
+                                <td>15 Aug, 2020</td>
+                                <td>22 August 2020</td>
+                                <td>Team S</td>
+                                <td>
+                                    <span class="badge warning">unsucessful</span>  </td>
+                            </tr>
+                            <tr>
+                                 <td>App Development</td>
+                                <td>15 Aug, 2020</td>
+                                <td>22 August 2020</td>
+                                <td>Team S</td>
+                                <td>
+                                   <span class="badge success">successful</span>  </td>
+                            </tr>
+                            <tr>
+                                <td>App Development</td>
+                                <td>15 Aug, 2020</td>
+                                <td>22 August 2020</td>
+                                <td>Team S</td>
+                                <td>
+                                    <span class="badge warning">unsucessful</span>  </td>
+                            </tr>
+                            <tr>
+                                <td>App Development</td>
+                                <td>15 Aug, 2020</td>
+                                <td>22 August 2020</td>
+                                <td>Team S</td>
+                                <td>
+                                    <span class="badge success">successful</span>  </td>
+                            </tr>
+                            <tr>
+                                <td>App Development</td>
+                                <td>15 Aug, 2020</td>
+                                <td>22 August 2020</td>
+                                <td>Team S</td>
+                                <td>
+                                    <span class="badge warning">unsucessful</span>  </td>
+                            </tr>
+     
+                        </tbody>
+                    </table>
+                </div>
+                </div>
+            </section>
+           </main>
+       </div>
     
 </body>
 </html>
