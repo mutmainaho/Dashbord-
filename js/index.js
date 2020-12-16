@@ -1,14 +1,21 @@
 console.log('hello')
 
-table = document.querySelector("tbody")
+const table = document.querySelector("tbody")
 
-add_button = document.getElementById('add-icon-svg')
 
-const addRow = () => {
-    rows = table.querySelectorAll('tr')
-    lastRow = rows[rows.lenght -1]
 
-    table.appen
+const addrow = () =>{
+    const rows = table.querySelectorAll('tr')
+    const lastRow = rows[rows.length -1]
+    table.innerHTML += lastRow.innerHTML
 }
 
 
+function init() {
+    document.getElementById('add-icon-svg').addEventListener("click", function(event) {
+        console.log('clicked');
+        addrow();
+    });
+  }
+
+  init()
