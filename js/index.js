@@ -23,10 +23,11 @@ const addrow = () =>{
 
     var newRow = table.insertRow();
     newRow.id = id 
-    for (let i =0; i<=12; i++){
+    for (let i =0; i<=11; i++){
         var newCell = newRow.insertCell();
         newCell.innerHTML = `<div  id = ${id}0${i} class='input' contenteditable='true'></div>`
     }
+    
     
 }
 
@@ -44,7 +45,6 @@ const validate_first_3 = (band) =>{
 
     if (isNaN(band.innerText) && band.innerText){
         band.className = "input badge box success"
-        // console.log(band)
         return
     }
     band.className = "input badge box warning"
@@ -61,7 +61,6 @@ function init() {
         if (event.target.classList.item(0) === 'input'){
             const value = event.target.id
             const id = parseInt(value.slice(-2,value.length+1))
-            console.log({id,value})
             
           if (id <3 ){
             validate_first_3(event.target)
