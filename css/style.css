@@ -88,14 +88,13 @@
 .main-content{
     /* position: relative; */
     /* margin-left: 240px; */
-    transition: margin-left 500ms;
+    
 }
 .header{
     position: fixed;
-    left: 240px;
     top: 0;
     z-index: 100;
-    width: 82%;
+    width: 100%;
     background: #fff;
     height: 60px;
     padding:0rem 1rem;
@@ -103,7 +102,8 @@
     align-items:center;
     justify-content: space-between;
     border-bottom: 1px solid #ccc;
-    transition: left 500ms;
+    font-weight: 700px;
+
     
 }
 .search-wrapper {
@@ -115,12 +115,31 @@
     outline:0;
     padding: 1rem;
     height: 38px;
+    font-size: 20px;
 }
 .main{
     margin-top: 60px;
     min-height: 90vh;
     padding:1rem;
     background:#f1f5f9;
+}
+.button{
+text-align:right;
+
+
+
+}
+.buttons{
+    color: #28b485;
+    background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 .recent{
     margin-top:3rem;
