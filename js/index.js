@@ -9,23 +9,25 @@ const set_id = (row) =>{
     const id = row.id
     const columns = row.querySelectorAll('td')
     for (let i=0; i<columns.length-1;i++){
-        columns[i].querySelector('div').id = id + i
+        columns[i].querySelector('div').id = id +'0' +i
     }
 }
 
 const addrow = () =>{
-    let rows = table.querySelectorAll('tr')
-    let lastRow = rows[rows.length -1]
-    const id = lastRow.id
-    
-    console.log(lastRow.id)
-    // temp.id = parseInt(new_id)+1
-    table.innerHTML += lastRow.innerHTML
 
-    rows = table.querySelectorAll('tr')
-    lastRow = rows[rows.length -1]
-    lastRow.id = parseInt(id) + 1
-    set_id(lastRow)
+    var div = document.createElement('div')
+    div.className = 'input'
+    div.contenteditable = "true"
+    let id = table.querySelectorAll('tr').length 
+    
+
+    var newRow = table.insertRow();
+    newRow.id = id 
+    for (let i =0; i<=12; i++){
+        var newCell = newRow.insertCell();
+        newCell.innerHTML = `<div  id = ${id}0${i} class='input' contenteditable='true'></div>`
+    }
+    
 }
 
 
@@ -39,32 +41,37 @@ const validate_band = (band) =>{
 }
 
 const validate_first_3 = (band) =>{
+
     if (isNaN(band.innerText) && band.innerText){
         band.className = "input badge box success"
+        // console.log(band)
         return
     }
     band.className = "input badge box warning"
 }
 
 function init() {
-    document.getElementById('add-icon-svg').addEventListener("click", function(event) {
-        // console.log('clicked');
-        addrow();
+    document.addEventListener("click", function(event) {
+        if (event.target.id === "add-icon-svg"){
+            addrow();
+            event.stopPropagation()
+        }
     });
-    document.querySelectorAll('td').forEach(e => e.addEventListener('keyup', function(event){
-        const value = event.target.id
-      const id = parseInt(value.slice(-2,value.length+1))
-    
-      if (id <3 ){
-        validate_first_3(event.target)
-      }
-      else if (id == 3){
-        validate_band(event.target)     
-      }
-    //   else if (id>=4 && id<=11){
+    document.addEventListener('keyup', function(event){
+        if (event.target.classList.item(0) === 'input'){
+            const value = event.target.id
+            const id = parseInt(value.slice(-2,value.length+1))
+            console.log({id,value})
             
-    //   }
-    }))
+          if (id <3 ){
+            validate_first_3(event.target)
+          }
+          else if (id == 3){
+            validate_band(event.target)     
+          }
+          event.stopPropagation()
+        }
+    })
   }
 
   init()
