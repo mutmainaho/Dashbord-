@@ -9,7 +9,7 @@
 </head>
 <body>
     <input type="checkbox" id="sidebar-toggle">
-    <div class="sidebar">
+    <!-- <div class="sidebar">
         <div class="sidebar-header">
             <h3 class="brand">
                 <span class="ti-unlink"></span>
@@ -30,106 +30,83 @@
                 <li><a href=""><span class="ti-book"></span>
                     <span>customers</span></a></li>
             </ul>
-        </div>
-    </div>
-       <div class="main-content">
-           <header class="header">
-               <div class="search-wrapper">
-                   <span class="ti-search"></span>
-                   <input type="search" placeholder="search">
-                
-               </div>
-               <div class="social-icons">
+        </div> -->
+    <!-- </div> -->
+    <div class="main-content">
+        <header class="header">
+            <div class="search-wrapper">
+                <span class="ti-search"></span>
+                <input type="search" placeholder="search">
+            
+            </div>
+            <div class="social-icons">
                 <span class="ti-bell"></span>
                 <span class="ti-comment"></span>
-               </div>   
-           </header>
-           <main class="main">
+            </div>   
+        </header>
+        <main class="main">
             <section class="recent">
                 <div class="activity-grid">
                     <div class="activity-card">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Project</th>
-                                <th>Start Date</th>
-                                <th>End Date</th>
-                                <th>Team</th>
-                                <th>Status</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>App Development</td>
-                                <td>15 Aug, 2020</td>
-                                <td>22 August 2020</td>
-                                <td>Team S</td>
-                                <td>
-                                    <span class="badge success">sucessful</span>  </td>
-                            <tr>
-                                <td>App Development</td>
-                                <td>15 Aug, 2020</td>
-                                <td>22 August 2020</td>
-                                <td>Team S</td>
-                                <td>
-                                    <span class="badge success">sucessful</span>  </td>
-                            </tr>
-                            <tr>
-                                <td>App Development</td>
-                                <td>15 Aug, 2020</td>
-                                <td>22 August 2020</td>
-                                <td>Team S</td>
-                                <td>
-                                    <span class="badge success">successful</span>  </td>
-                            </tr>
-                            <tr>
-                                <td>App Development</td>
-                                <td>15 Aug, 2020</td>
-                                <td>22 August 2020</td>
-                                <td>Team S</td>
-                                <td>
-                                    <span class="badge warning">unsucessful</span>  </td>
-                            </tr>
-                            <tr>
-                                 <td>App Development</td>
-                                <td>15 Aug, 2020</td>
-                                <td>22 August 2020</td>
-                                <td>Team S</td>
-                                <td>
-                                   <span class="badge success">successful</span>  </td>
-                            </tr>
-                            <tr>
-                                <td>App Development</td>
-                                <td>15 Aug, 2020</td>
-                                <td>22 August 2020</td>
-                                <td>Team S</td>
-                                <td>
-                                    <span class="badge warning">unsucessful</span>  </td>
-                            </tr>
-                            <tr>
-                                <td>App Development</td>
-                                <td>15 Aug, 2020</td>
-                                <td>22 August 2020</td>
-                                <td>Team S</td>
-                                <td>
-                                    <span class="badge success">successful</span>  </td>
-                            </tr>
-                            <tr>
-                                <td>App Development</td>
-                                <td>15 Aug, 2020</td>
-                                <td>22 August 2020</td>
-                                <td>Team S</td>
-                                <td>
-                                    <span class="badge warning">unsucessful</span>  </td>
-                            </tr>
-     
-                        </tbody>
-                    </table>
-                </div>
+                        <table id = "table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th colspan="3">LOAD (Amps)</th>
+                                    <th colspan="3">VOLTAGE (kV)</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <th>33KV FEEDER</th>
+                                    <th>INJECTION SUB STATION</th>
+                                    <th>11KV FEEDER</th>
+                                    <th>FEEDER BAND</th>
+                                    <th>IA</th>
+                                    <th>IB</th>
+                                    <th>IC</th>
+                                    <th>VA</th>
+                                    <th>VB</th>
+                                    <th>VC</th>
+                                    <th>MW</th>
+                                    <th>PF</th>
+                                    <th>VALID</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr id = "0">
+                                    <td><div  id = "000" class="input badge box warning" contenteditable="true"> </div></td>
+                                    <td><div  id = "001" class="input badge box warning" contenteditable="true"></div></td>
+                                    <td><div  id = "002" class="input badge box warning" contenteditable="true"> </div></td>
+                                    <td><div  id = "003" class="input badge box warning" contenteditable="true"></div></td>
+                                    <td><div  id = "004" class="input badge box warning" contenteditable="true"></div></td>
+                                    <td><div  id = "005" class="input badge box warning" contenteditable="true"></div></td>
+                                    <td><div  id = "006" class="input badge box warning" contenteditable="true"></div></td>
+                                    <td><div  id = "007" class="input badge box warning" contenteditable="true"></div></td>
+                                    <td><div  id = "008" class="input badge box warning" contenteditable="true"></div></td>
+                                    <td><div  id = "009" class="input badge box warning" contenteditable="true"></div></td>
+                                    <td><div  id = "010" class="input badge box warning" contenteditable="true"></div></td>
+                                    <td><div  id = "011" class="input badge box warning" contenteditable="true"></div></td>
+                                    <td>
+                                        <span class="badge warning">
+                                            <span class="ti-close"></span>
+                                        </span>  
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="add-icon">
+                            <img id="add-icon-svg" src="./resources/add.svg" alt="add row", width="40em">
+                        </div>
+                    </div>
                 </div>
             </section>
            </main>
-       </div>
-    
+    </div>
+    <script type="text/javascript" src="js/index.js"></script>
 </body>
 </html>
