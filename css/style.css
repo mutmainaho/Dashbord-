@@ -142,7 +142,9 @@ th, td{
     color: var(--color-grey);
 }
  td{
+     height: 2rem;
      font-size: .85rem;
+     padding:0rem 0rem;
  }
  th[colspan="3"] {
     text-align: center;
@@ -197,6 +199,8 @@ tr:last-child{
 }
 .add-icon{
     position: relative;
+    color: white;
+    align-items: center;
 }
 
 .add-icon>img{

@@ -24,10 +24,11 @@ const addrow = () =>{
     var newRow = table.insertRow();
     newRow.id = id 
     for (let i =0; i<=11; i++){
-        var newCell = newRow.insertCell();
-        newCell.innerHTML = `<div  id = ${id}0${i} class='input' contenteditable='true'></div>`
+        const newCell = newRow.insertCell();
+        newCell.innerHTML = `<div  id = ${id}0${i} class="input badge box warning" contenteditable='true'></div>`
     }
-    
+    const newCell = newRow.insertCell();
+        newCell.innerHTML = `<span class="badge warning"><span class="ti-close"></span></span> ` 
     
 }
 
@@ -49,6 +50,29 @@ const validate_first_3 = (band) =>{
     }
     band.className = "input badge box warning"
 }
+const validate_row = (row) => {
+    const row_num = document.getElementById(row).querySelectorAll("td")
+    const last =  row_num[row_num.length - 1]
+    for (let i=0; i<row_num.length-1; i++){
+        const div = row_num[i].querySelector('div')
+        // console.log(div.classList.item(3))
+        if (div.classList.item(3) === "warning"){
+
+           last.querySelector('span').className = "badge warning"
+           last.querySelector('span').innerHTML = `<span class="ti-close"></span>`
+           return
+        }
+        last.querySelector('span').className = "badge success"
+        last.querySelector('span').innerHTML = `<span class="ti-check"></span>`
+    }
+}
+const validate_rest = (band)=>{
+    if (isNaN(band.innerText) || !band.innerText){
+        band.className = "input badge box warning"
+        return
+    }
+    band.className = "input badge box success"
+}
 
 function init() {
     document.addEventListener("click", function(event) {
@@ -68,7 +92,12 @@ function init() {
           else if (id == 3){
             validate_band(event.target)     
           }
+          else{
+              validate_rest(event.target)
+          }
           event.stopPropagation()
+        //   console.log()
+          validate_row(event.target.id.slice(0,-2))
         }
     })
   }
