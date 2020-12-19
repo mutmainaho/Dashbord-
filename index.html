@@ -37,14 +37,13 @@
             <div class="search-wrapper">
                 <span class="ti-search"></span>
                 <input type="search" placeholder="search">
-            
-            </div>
-            <div class="social-icons">
-                <span class="ti-bell"></span>
-                <span class="ti-comment"></span>
-            </div>   
+    
         </header>
         <main class="main">
+            <div class="button">
+                <button id="submit" type="submit" class="buttons" >Submit</button>
+                <button id="export" type="submit" class="buttons">Export</button>
+            </div>
             <section class="recent">
                 <div class="activity-grid">
                     <div class="activity-card">
@@ -62,7 +61,8 @@
                                     <th></th>
                                 </tr>
                                 <tr>
-                                    <th>33KV FEEDER</th>
+                                    
+                                    <th> 33KV FEEDER</th>
                                     <th>INJECTION SUB STATION</th>
                                     <th>11KV FEEDER</th>
                                     <th>FEEDER BAND</th>
@@ -75,11 +75,13 @@
                                     <th>MW</th>
                                     <th>PF</th>
                                     <th>VALID</th>
+                                    <th></th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id = "body">
                                 <tr id = "0">
-                                    <td><div  id = "000" class="input badge box warning" contenteditable="true"> </div></td>
+                                    
+                                    <td><div  id = "000" class="input badge box warning" contenteditable="true"> </div> </td>
                                     <td><div  id = "001" class="input badge box warning" contenteditable="true"></div></td>
                                     <td><div  id = "002" class="input badge box warning" contenteditable="true"> </div></td>
                                     <td><div  id = "003" class="input badge box warning" contenteditable="true"></div></td>
@@ -92,8 +94,13 @@
                                     <td><div  id = "010" class="input badge box warning" contenteditable="true"></div></td>
                                     <td><div  id = "011" class="input badge box warning" contenteditable="true"></div></td>
                                     <td>
-                                        <span class="badge warning">
+                                        <span id= "0" class="badge warning valid">
                                             <span class="ti-close"></span>
+                                        </span>  
+                                    </td>
+                                    <td>
+                                        <span id = "0" class="bin">
+                                            <span id="trash" class="ti-trash"></span>
                                         </span>  
                                     </td>
                                 </tr>
