@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: montserrat;
+    height:100vh ;
+    background:#4CAF50;
+
+}
+.sign-up-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background:#f1f5f9;
+    border-radius: 10px;
+}
+.sign-up-form h1{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+}
+.sign-up-form form{
+    padding:0 40px;
+    box-sizing: border-box;
+}
+form .text-field{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+.text-field input{
+    width:100%;
+    padding:0 5px;
+    height: 40px;
+    font-size:16px;
+    border:none;
+    background:none;
+    outline: none;
+}
+
+.text-field label{
+    position: absolute;
+    top:50%;
+    left:5px;
+    color:#adadad;
+    transform:translateY(-50%);
+    font-size:16px;
+    pointer-events: none;
+    transition: .5s;
+    
+}
+
+.text-field span::before{
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width:100%;
+    height: 2px;
+    background:#4CAF50;
+}
+
+.text-field input:focus ~ label
+{
+    top: -5px;
+    color: #4CAF50;
+}
+.text-field input:focus ~ span::before,
+.text-field input:valid ~ span::before{
+
+    width:100%;
+}
+.pass{
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+}
+.pass:hover{
+    text-decoration: underline;
+}
+input[type="submit"]{
+    width: 100%;
+    height:50px;
+    border: 1px solid;
+    background: #4CAF50;
+    border-radius: 20px;
+    font-size:20px;
+    color: #e9f4fb;
+    font-weight:700;
+    cursor: pointer;
+    outline: none;
+}
+input[type="submit"]:hover{
+    border-color: #4CAF50;
+    transition: .5s;
+}
+.signup-link{
+    margin: 30px 0;
+    text-align: center;
+    font-size:16px;
+    color: #666666;
+}
+.signup-link a{
+    color: #4CAF50;
+    text-decoration: none;
+}
+.signup-link a:hover{
+    text-decoration: underline;
+}
