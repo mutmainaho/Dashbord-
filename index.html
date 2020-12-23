@@ -41,8 +41,9 @@
         </header>
         <main class="main">
             <div class="button">
-                <button type="submit" class="buttons" >Submit</button>
-                <button type="submit" class="buttons">Export</button>
+                <button id="submit" type="submit" class="buttons" >Submit</button>
+                <button id="export" type="submit" class="buttons">Export</button>
+
             </div>
             <section class="recent">
                 <div class="activity-grid">
@@ -75,10 +76,11 @@
                                     <th>MW</th>
                                     <th>PF</th>
                                     <th>VALID</th>
-                                    <th>INVALID</th>
+                                    <th></th>
+
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id = "body">
                                 <tr id = "0">
                                     
                                     <td><div  id = "000" class="input badge box warning" contenteditable="true"> </div> </td>
@@ -94,13 +96,13 @@
                                     <td><div  id = "010" class="input badge box warning" contenteditable="true"></div></td>
                                     <td><div  id = "011" class="input badge box warning" contenteditable="true"></div></td>
                                     <td>
-                                        <span class="badge warning valid">
+                                        <span id= "0" class="badge warning valid">
                                             <span class="ti-close"></span>
                                         </span>  
                                     </td>
                                     <td>
-                                        <span class="bin">
-                                            <span class="ti-trash"></span>
+                                        <span id = "0" class="bin">
+                                          <span id="trash" class="ti-trash"></span>
                                         </span>  
                                     </td>
                                 </tr>
